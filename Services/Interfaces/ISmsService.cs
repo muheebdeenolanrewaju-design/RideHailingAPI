@@ -1,6 +1,7 @@
 ﻿namespace RideHailingAPI.Services.Interfaces;
 
-public class ISmsService
+
+public interface ISmsService
 {
-    
+    Task SendSmsAsync(string phoneNumber, string message);
 }

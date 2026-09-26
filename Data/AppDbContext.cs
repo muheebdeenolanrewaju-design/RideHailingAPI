@@ -1,4 +1,5 @@
-﻿using RideHailingAPI.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using RideHailingAPI.Domain.Entities;
 
 namespace RideHailingAPI.Data;
 

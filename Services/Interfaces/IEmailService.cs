@@ -1,6 +1,6 @@
 ﻿namespace RideHailingAPI.Services.Interfaces;
 
-public class IEmailService
+public interface IEmailService
 {
-    
+    Task SendEmailAsync(string to, string subject, string body);
 }

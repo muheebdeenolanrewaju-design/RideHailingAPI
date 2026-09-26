@@ -1,6 +1,14 @@
-﻿namespace RideHailingAPI.Repository.Interfaces;
+﻿using RideHailingAPI.Domain.Entities;
 
-public class IOtpRepository
+namespace RideHailingAPI.Repository.Interfaces;
+
+public interface IOtpRepository
 {
-    
+    Task AddEmailOtpAsync(EmailOtp otp);
+    Task<EmailOtp?> GetValidEmailOtpAsync(int userId, string code);
+    Task AddPhoneOtpAsync(PhoneOtp otp);
+    Task<PhoneOtp?> GetValidPhoneOtpAsync(int userId, string code);
+    Task AddPasswordResetOtpAsync(PasswordResetOtp otp);
+    Task<PasswordResetOtp?> GetValidPasswordResetOtpAsync(int userId, string code);
+    Task SaveChangesAsync();
 }

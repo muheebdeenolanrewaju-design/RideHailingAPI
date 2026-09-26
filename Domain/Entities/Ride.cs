@@ -10,11 +10,12 @@ public class Ride
     public int PassengerId { get; set; }
     public User Passenger { get; set; } = null!;
 
-    public int? DriverId { get; set; }
+    public int? DriverId { get; set; } // Note: Named DriverId here
     public DriverProfile? Driver { get; set; }
 
     public string PickupLocation { get; set; } = string.Empty;
     public string Destination { get; set; } = string.Empty;
+    public decimal EstimatedFare { get; set; } // Add this property
     public RideStatus CurrentStatus { get; set; } = RideStatus.Requested;
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

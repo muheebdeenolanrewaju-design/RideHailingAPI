@@ -1,6 +1,12 @@
-﻿namespace RideHailingAPI.Repository.Interfaces;
+﻿using RideHailingAPI.Domain.Entities;
 
-public class IDriverRepository
+namespace RideHailingAPI.Repository.Interfaces;
+
+public interface IDriverRepository
 {
-    
+    Task<DriverProfile?> GetDriverProfileByIdAsync(int driverProfileId);
+    Task<DriverProfile?> GetDriverProfileByUserIdAsync(int userId);
+    Task AddDriverProfileAsync(DriverProfile driverProfile);
+    Task<List<DriverProfile>> GetPendingDriversAsync();
+    Task SaveChangesAsync();
 }

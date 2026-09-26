@@ -9,6 +9,7 @@ public class DriverProfile
     public User User { get; set; } = null!;
 
     public string LicenseNumber { get; set; } = string.Empty;
+    public bool IsAvailable { get; set; }
     public DriverApprovalStatus ApprovalStatus { get; set; } = DriverApprovalStatus.Pending;
     public DriverAvailabilityStatus AvailabilityStatus { get; set; } = DriverAvailabilityStatus.Unavailable;
     public DateTime? ApprovedAt { get; set; }

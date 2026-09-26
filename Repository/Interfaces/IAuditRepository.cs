@@ -1,6 +1,10 @@
-﻿namespace RideHailingAPI.Repository.Interfaces;
+﻿using RideHailingAPI.Domain.Entities;
 
-public class IAuditRepository
+namespace RideHailingAPI.Repository.Interfaces;
+
+public interface IAuditRepository
 {
-    
+    Task<List<AuditLog>> GetAuditLogsAsync();
+    Task AddAuditLogAsync(AuditLog log);
+    Task SaveChangesAsync();
 }

@@ -1,6 +1,12 @@
-﻿namespace RideHailingAPI.Services.Interfaces;
+﻿using RideHailingAPI.DTOs;
+using RideHailingAPI.DTOs.Ride;
 
-public class IRideService
+namespace RideHailingAPI.Services.Interfaces;
+
+public interface IRideService
 {
-    
+    Task<ApiReponse> CreateRideAsync(int passengerUserId, CreateRideRequest request);
+    Task<ApiReponse> CancelRideAsync(int passengerUserId, int rideId);
+    Task<ApiReponse> GetRideByIdAsync(int userId, string userRole, int rideId);
+    Task<ApiReponse> GetPassengerRideHistoryAsync(int passengerUserId);
 }

@@ -1,6 +1,9 @@
-﻿namespace RideHailingAPI.DTOs.Auth;
+﻿using System.ComponentModel.DataAnnotations;
 
-public class ForgotPasswordDto
+namespace RideHailingAPI.DTOs.Auth;
+
+public class ForgotPasswordRequest
 {
-    
+    [Required, EmailAddress]
+    public string Email { get; set; } = string.Empty;
 }
